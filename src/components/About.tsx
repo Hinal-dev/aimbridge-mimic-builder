@@ -1,5 +1,5 @@
 
-import { Award, Globe, Users2 } from 'lucide-react';
+import { Award, Globe, Users2, Building2 } from 'lucide-react';
 
 const About = () => {
   const stats = [
