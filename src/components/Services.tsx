@@ -1,27 +1,42 @@
 
-import { Building2, Users, TrendingUp, Shield } from 'lucide-react';
+import { Building2, Users, TrendingUp, Shield, Handshake, RefreshCw, Hammer, DollarSign, Target, UserCheck } from 'lucide-react';
 
 const Services = () => {
   const services = [
     {
       icon: Building2,
-      title: "Property Management",
-      description: "Complete operational oversight ensuring optimal performance and guest satisfaction across all property types."
+      title: "Hotel Operations Management",
+      description: "Day-to-day management of limited-service properties with a focus on guest satisfaction, operational efficiency, and profitability."
     },
     {
-      icon: Users,
-      title: "Staff Excellence",
-      description: "Comprehensive training programs and management systems that develop world-class hospitality teams."
+      icon: Handshake,
+      title: "Franchise Development & Negotiation",
+      description: "Expert guidance in selecting the right franchise brand, negotiating favorable terms, and navigating the approval process."
     },
     {
-      icon: TrendingUp,
-      title: "Revenue Optimization",
-      description: "Strategic pricing and revenue management solutions that maximize profitability and market performance."
+      icon: RefreshCw,
+      title: "Franchise Conversion Services",
+      description: "Seamless brand transitions, including rebranding, compliance, and operational alignment to meet new franchise standards."
     },
     {
-      icon: Shield,
-      title: "Quality Assurance",
-      description: "Rigorous quality standards and continuous monitoring to maintain exceptional service levels."
+      icon: Hammer,
+      title: "Property Renovation & Construction Oversight",
+      description: "Hands-on project management for renovations, PIP compliance, and ground-up construction, ensuring projects are completed on time and within budget."
+    },
+    {
+      icon: DollarSign,
+      title: "Financial Performance & Reporting",
+      description: "Robust budgeting, forecasting, and detailed reporting to drive accountability and maximize return on investment."
+    },
+    {
+      icon: Target,
+      title: "Sales & Marketing Strategy",
+      description: "Implementation of proven sales tactics, local marketing initiatives, and revenue management tools to increase visibility and bookings."
+    },
+    {
+      icon: UserCheck,
+      title: "Human Resources & Staff Development",
+      description: "Recruitment, training, and retention strategies to build strong, guest-focused teams and support positive work culture."
     }
   ];
 
@@ -37,17 +52,17 @@ const Services = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <div 
               key={index} 
-              className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group"
+              className="bg-white p-6 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group"
             >
-              <div className="bg-amber-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:bg-amber-200 transition-colors duration-300">
-                <service.icon className="text-amber-600" size={32} />
+              <div className="bg-amber-100 w-14 h-14 rounded-xl flex items-center justify-center mb-4 group-hover:bg-amber-200 transition-colors duration-300">
+                <service.icon className="text-amber-600" size={28} />
               </div>
-              <h3 className="text-xl font-bold text-slate-800 mb-4">{service.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{service.description}</p>
+              <h3 className="text-lg font-bold text-slate-800 mb-3 leading-tight">{service.title}</h3>
+              <p className="text-gray-600 leading-relaxed text-sm">{service.description}</p>
             </div>
           ))}
         </div>
