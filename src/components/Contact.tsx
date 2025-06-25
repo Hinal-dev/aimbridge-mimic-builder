@@ -1,7 +1,28 @@
 
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { useState } from 'react';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+    // Handle form submission here
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
   return (
     <section id="contact" className="py-20 bg-slate-800 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,7 +55,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="font-semibold">Email</div>
-                  <div className="text-gray-300">contact@premiumstay.com</div>
+                  <div className="text-gray-300">contact@goldcoasthm.com</div>
                 </div>
               </div>
               
@@ -43,43 +64,60 @@ const Contact = () => {
                   <MapPin size={24} />
                 </div>
                 <div>
-                  <div className="font-semibold">Address</div>
-                  <div className="text-gray-300">123 Hospitality Avenue<br />New York, NY 10001</div>
+                  <div className="font-semibold">Headquarters</div>
+                  <div className="text-gray-300">Long Island, New York</div>
                 </div>
               </div>
             </div>
           </div>
           
           <div>
-            <h3 className="text-2xl font-bold mb-8 text-amber-400">Send us a Message</h3>
-            <form className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
+            <h3 className="text-2xl font-bold mb-8 text-amber-400">Send a Message to Management</h3>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
                 <input 
                   type="text" 
-                  placeholder="Your Name"
+                  name="name"
+                  placeholder="Your Name *"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-amber-500 transition-colors duration-200"
+                />
+              </div>
+              <div className="grid md:grid-cols-2 gap-6">
+                <input 
+                  type="email" 
+                  name="email"
+                  placeholder="Your Email *"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
                   className="bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-amber-500 transition-colors duration-200"
                 />
                 <input 
-                  type="email" 
-                  placeholder="Your Email"
+                  type="tel" 
+                  name="phone"
+                  placeholder="Call Back Number"
+                  value={formData.phone}
+                  onChange={handleChange}
                   className="bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-amber-500 transition-colors duration-200"
                 />
               </div>
-              <input 
-                type="text" 
-                placeholder="Subject"
-                className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-amber-500 transition-colors duration-200"
-              />
               <textarea 
+                name="message"
                 rows={5}
-                placeholder="Your Message"
+                placeholder="Your Message *"
+                value={formData.message}
+                onChange={handleChange}
+                required
                 className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-amber-500 transition-colors duration-200 resize-none"
               ></textarea>
               <button 
                 type="submit"
                 className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center group"
               >
-                Send Message
+                Send Message to Management
                 <Send className="ml-2 group-hover:translate-x-1 transition-transform duration-200" size={18} />
               </button>
             </form>
