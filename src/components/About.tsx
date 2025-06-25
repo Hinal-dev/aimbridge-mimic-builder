@@ -1,4 +1,3 @@
-
 import { Award, Globe, Users2, Building2, Calendar, Target, Heart, User } from 'lucide-react';
 
 const About = () => {
@@ -32,6 +31,7 @@ const About = () => {
           </h2>
         </div>
 
+        {/* Company Story Section */}
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
           <div>
             <h3 className="text-3xl font-bold text-slate-800 mb-6">Our Story</h3>
@@ -61,6 +61,7 @@ const About = () => {
           </div>
         </div>
 
+        {/* Vision Section */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-slate-800 mb-8 text-center">Our Vision</h3>
           <div className="bg-slate-50 rounded-2xl p-8">
@@ -70,6 +71,20 @@ const About = () => {
           </div>
         </div>
 
+        {/* Achievements Section - moved here for better flow */}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {achievements.map((achievement, index) => (
+            <div key={index} className="text-center bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+              <div className="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <achievement.icon className="text-amber-600" size={32} />
+              </div>
+              <h4 className="text-xl font-bold text-slate-800 mb-3">{achievement.title}</h4>
+              <p className="text-gray-600">{achievement.description}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Leadership Team Section */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-slate-800 mb-8 text-center">Our Leadership Team</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -84,19 +99,8 @@ const About = () => {
             ))}
           </div>
         </div>
-
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {achievements.map((achievement, index) => (
-            <div key={index} className="text-center bg-white p-6 rounded-xl shadow-lg border border-gray-100">
-              <div className="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <achievement.icon className="text-amber-600" size={32} />
-              </div>
-              <h4 className="text-xl font-bold text-slate-800 mb-3">{achievement.title}</h4>
-              <p className="text-gray-600">{achievement.description}</p>
-            </div>
-          ))}
-        </div>
         
+        {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
