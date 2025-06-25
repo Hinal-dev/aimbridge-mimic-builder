@@ -1,5 +1,5 @@
 
-import { Award, Globe, Users2, Building2, Calendar, Target, Heart } from 'lucide-react';
+import { Award, Globe, Users2, Building2, Calendar, Target, Heart, User } from 'lucide-react';
 
 const About = () => {
   const stats = [
@@ -13,6 +13,13 @@ const About = () => {
     { icon: Target, title: "Strategic Growth", description: "From a single budget motel to a trusted industry leader" },
     { icon: Award, title: "Operational Excellence", description: "Decades of hands-on experience across all hospitality facets" },
     { icon: Heart, title: "Guest-Focused", description: "Creating lasting impressions and elevating guest experiences" }
+  ];
+
+  const teamMembers = [
+    { name: "Sirish Patel", title: "Chief Executive Officer" },
+    { name: "Shiv Patel", title: "President" },
+    { name: "Soniya Patel", title: "Vice President" },
+    { name: "Chandni Dumbhalia", title: "Director of Operations" }
   ];
 
   return (
@@ -60,6 +67,21 @@ const About = () => {
             <p className="text-lg text-gray-700 leading-relaxed text-center max-w-4xl mx-auto">
               Our vision goes beyond day-to-day operations. We are committed to building strong partnerships, adapting to evolving guest expectations, and positioning our properties for sustainable growth in an ever-changing hospitality landscape. We see every hotel as more than a business—it's an opportunity to create lasting impressions, build community trust, and elevate the guest experience. At Gold Coast Hospitality Management, we don't just manage properties—we shape their potential.
             </p>
+          </div>
+        </div>
+
+        <div className="mb-16">
+          <h3 className="text-3xl font-bold text-slate-800 mb-8 text-center">Our Leadership Team</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {teamMembers.map((member, index) => (
+              <div key={index} className="text-center bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                <div className="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <User className="text-amber-600" size={32} />
+                </div>
+                <h4 className="text-lg font-bold text-slate-800 mb-2">{member.name}</h4>
+                <p className="text-amber-600 font-medium text-sm">{member.title}</p>
+              </div>
+            ))}
           </div>
         </div>
 
