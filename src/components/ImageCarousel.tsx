@@ -5,20 +5,24 @@ import { Card, CardContent } from "@/components/ui/card";
 const ImageCarousel = () => {
   const images = [
     {
-      src: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Grand Marina Resort"
+      src: "/lovable-uploads/6b553e4e-7b6d-430a-9b29-8b9a5400bb14.png",
+      alt: "Travelodge Hotel Exterior"
     },
     {
-      src: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Metropolitan Suites"
+      src: "/lovable-uploads/22e0a815-dede-4b3b-8502-ef7cfc194bfe.png",
+      alt: "Hotel Room Interior"
     },
     {
-      src: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Oceanview Boutique"
+      src: "/lovable-uploads/56a98ddb-5119-45e9-964d-f3002600f6ef.png",
+      alt: "Hotel Lobby and Reception"
     },
     {
-      src: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Alpine Lodge"
+      src: "/lovable-uploads/9ef73cb6-22d2-458e-9591-ee55ef5a33ef.png",
+      alt: "Super 8 Hotel Exterior"
+    },
+    {
+      src: "/lovable-uploads/5e6b71ee-13a3-445a-8bd3-455976a8e442.png",
+      alt: "Hotel Atrium and Lounge"
     }
   ];
 
