@@ -1,6 +1,8 @@
 
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,11 +11,62 @@ const Contact = () => {
     phone: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission here
+    
+    if (!formData.name || !formData.email || !formData.message) {
+      toast({
+        title: "Error",
+        description: "Please fill in all required fields",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      // Replace these with your actual EmailJS credentials
+      const serviceId = 'YOUR_SERVICE_ID';
+      const templateId = 'YOUR_TEMPLATE_ID';
+      const publicKey = 'YOUR_PUBLIC_KEY';
+
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+        to_email: 'info@goldcoasthm.com'
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      
+      toast({
+        title: "Success!",
+        description: "Your message has been sent successfully. We'll get back to you soon!",
+      });
+
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+      });
+
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again later or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -55,7 +108,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="font-semibold">Email</div>
-                  <div className="text-gray-300">contact@goldcoasthm.com</div>
+                  <div className="text-gray-300">info@goldcoasthm.com</div>
                 </div>
               </div>
               
@@ -68,6 +121,19 @@ const Contact = () => {
                   <div className="text-gray-300">Long Island, New York</div>
                 </div>
               </div>
+            </div>
+
+            <div className="mt-12 p-6 bg-slate-700 rounded-lg">
+              <h4 className="text-lg font-semibold text-amber-400 mb-4">Setup Required</h4>
+              <p className="text-sm text-gray-300 mb-4">
+                To enable email functionality, please:
+              </p>
+              <ol className="text-sm text-gray-300 space-y-2 list-decimal list-inside">
+                <li>Create a free account at <a href="https://www.emailjs.com/" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:underline">EmailJS.com</a></li>
+                <li>Set up an email service (Gmail, Outlook, etc.)</li>
+                <li>Create an email template</li>
+                <li>Replace the placeholder credentials in the code with your actual EmailJS Service ID, Template ID, and Public Key</li>
+              </ol>
             </div>
           </div>
           
@@ -115,9 +181,10 @@ const Contact = () => {
               ></textarea>
               <button 
                 type="submit"
-                className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center group"
+                disabled={isSubmitting}
+                className="bg-amber-600 hover:bg-amber-700 disabled:bg-amber-800 disabled:cursor-not-allowed text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center group"
               >
-                Send Message to Management
+                {isSubmitting ? 'Sending...' : 'Send Message to Management'}
                 <Send className="ml-2 group-hover:translate-x-1 transition-transform duration-200" size={18} />
               </button>
             </form>
