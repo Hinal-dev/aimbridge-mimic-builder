@@ -23,28 +23,26 @@ const ImageCarousel = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Carousel className="w-full max-w-5xl mx-auto">
+    <section className="relative">
+      <div className="w-full">
+        <Carousel className="w-full">
           <CarouselContent>
             {images.map((image, index) => (
               <CarouselItem key={index}>
-                <div className="p-1">
-                  <Card className="border-0 shadow-2xl overflow-hidden">
-                    <CardContent className="p-0">
-                      <img
-                        src={image.src}
-                        alt={image.alt}
-                        className="w-full h-[400px] md:h-[500px] object-cover"
-                      />
-                    </CardContent>
-                  </Card>
-                </div>
+                <Card className="border-0 rounded-none overflow-hidden">
+                  <CardContent className="p-0">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-[60vh] md:h-[70vh] lg:h-[80vh] object-cover"
+                    />
+                  </CardContent>
+                </Card>
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="left-4" />
-          <CarouselNext className="right-4" />
+          <CarouselPrevious className="left-4 bg-white/80 hover:bg-white" />
+          <CarouselNext className="right-4 bg-white/80 hover:bg-white" />
         </Carousel>
       </div>
     </section>
