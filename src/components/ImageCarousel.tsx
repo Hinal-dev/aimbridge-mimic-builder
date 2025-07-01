@@ -23,18 +23,18 @@ const ImageCarousel = () => {
   ];
 
   return (
-    <section className="relative">
-      <div className="w-full">
-        <Carousel className="w-full">
+    <section className="relative h-screen">
+      <div className="w-full h-full">
+        <Carousel className="w-full h-full">
           <CarouselContent>
             {images.map((image, index) => (
               <CarouselItem key={index}>
-                <Card className="border-0 rounded-none overflow-hidden">
-                  <CardContent className="p-0">
+                <Card className="border-0 rounded-none overflow-hidden h-screen">
+                  <CardContent className="p-0 h-full">
                     <img
                       src={image.src}
                       alt={image.alt}
-                      className="w-full h-[60vh] md:h-[70vh] lg:h-[80vh] object-cover"
+                      className="w-full h-full object-cover"
                     />
                   </CardContent>
                 </Card>
