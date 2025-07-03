@@ -41,13 +41,13 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-50">
+    <section id="services" className="py-20 bg-[#101923]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Our Services
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Comprehensive hospitality management solutions designed to elevate your property's performance and guest experience.
           </p>
         </div>
@@ -58,10 +58,10 @@ const Services = () => {
               key={index} 
               className="bg-white p-6 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group"
             >
-              <div className="bg-amber-100 w-14 h-14 rounded-xl flex items-center justify-center mb-4 group-hover:bg-amber-200 transition-colors duration-300">
-                <service.icon className="text-amber-600" size={28} />
+              <div className="bg-[#FFA233]/10 w-14 h-14 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#FFA233]/20 transition-colors duration-300">
+                <service.icon className="text-[#FFA233]" size={28} />
               </div>
-              <h3 className="text-lg font-bold text-slate-800 mb-3 leading-tight">{service.title}</h3>
+              <h3 className="text-lg font-bold text-[#101923] mb-3 leading-tight">{service.title}</h3>
               <p className="text-gray-600 leading-relaxed text-sm">{service.description}</p>
             </div>
           ))}

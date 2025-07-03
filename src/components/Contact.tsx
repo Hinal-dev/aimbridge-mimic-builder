@@ -77,7 +77,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-slate-800 text-white">
+    <section id="contact" className="py-20 bg-[#101923] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -90,11 +90,11 @@ const Contact = () => {
         
         <div className="grid lg:grid-cols-2 gap-16">
           <div>
-            <h3 className="text-2xl font-bold mb-8 text-amber-400">Contact Information</h3>
+            <h3 className="text-2xl font-bold mb-8 text-[#FFA233]">Contact Information</h3>
             <div className="space-y-6">
               <div className="flex items-center">
-                <div className="bg-amber-600 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
-                  <Phone size={24} />
+                <div className="bg-[#FFA233] w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                  <Phone size={24} className="text-white" />
                 </div>
                 <div>
                   <div className="font-semibold">Phone</div>
@@ -103,8 +103,8 @@ const Contact = () => {
               </div>
               
               <div className="flex items-center">
-                <div className="bg-amber-600 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
-                  <Mail size={24} />
+                <div className="bg-[#FFA233] w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                  <Mail size={24} className="text-white" />
                 </div>
                 <div>
                   <div className="font-semibold">Email</div>
@@ -113,8 +113,8 @@ const Contact = () => {
               </div>
               
               <div className="flex items-center">
-                <div className="bg-amber-600 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
-                  <MapPin size={24} />
+                <div className="bg-[#FFA233] w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                  <MapPin size={24} className="text-white" />
                 </div>
                 <div>
                   <div className="font-semibold">Headquarters</div>
@@ -123,13 +123,13 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="mt-12 p-6 bg-slate-700 rounded-lg">
-              <h4 className="text-lg font-semibold text-amber-400 mb-4">Setup Required</h4>
+            <div className="mt-12 p-6 bg-white/10 rounded-lg">
+              <h4 className="text-lg font-semibold text-[#FFA233] mb-4">Setup Required</h4>
               <p className="text-sm text-gray-300 mb-4">
                 To enable email functionality, please:
               </p>
               <ol className="text-sm text-gray-300 space-y-2 list-decimal list-inside">
-                <li>Create a free account at <a href="https://www.emailjs.com/" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:underline">EmailJS.com</a></li>
+                <li>Create a free account at <a href="https://www.emailjs.com/" target="_blank" rel="noopener noreferrer" className="text-[#FFA233] hover:underline">EmailJS.com</a></li>
                 <li>Set up an email service (Gmail, Outlook, etc.)</li>
                 <li>Create an email template</li>
                 <li>Replace the placeholder credentials in the code with your actual EmailJS Service ID, Template ID, and Public Key</li>
@@ -138,7 +138,7 @@ const Contact = () => {
           </div>
           
           <div>
-            <h3 className="text-2xl font-bold mb-8 text-amber-400">Send a Message to Management</h3>
+            <h3 className="text-2xl font-bold mb-8 text-[#FFA233]">Send a Message to Management</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <input 
@@ -148,7 +148,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-amber-500 transition-colors duration-200"
+                  className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#FFA233] transition-colors duration-200"
                 />
               </div>
               <div className="grid md:grid-cols-2 gap-6">
@@ -159,7 +159,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-amber-500 transition-colors duration-200"
+                  className="bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#FFA233] transition-colors duration-200"
                 />
                 <input 
                   type="tel" 
@@ -167,7 +167,7 @@ const Contact = () => {
                   placeholder="Call Back Number"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-amber-500 transition-colors duration-200"
+                  className="bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#FFA233] transition-colors duration-200"
                 />
               </div>
               <textarea 
@@ -177,12 +177,12 @@ const Contact = () => {
                 value={formData.message}
                 onChange={handleChange}
                 required
-                className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-amber-500 transition-colors duration-200 resize-none"
+                className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#FFA233] transition-colors duration-200 resize-none"
               ></textarea>
               <button 
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-amber-600 hover:bg-amber-700 disabled:bg-amber-800 disabled:cursor-not-allowed text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center group"
+                className="bg-[#FFA233] hover:bg-[#FF8C00] disabled:bg-[#FFA233]/50 disabled:cursor-not-allowed text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center group"
               >
                 {isSubmitting ? 'Sending...' : 'Send Message to Management'}
                 <Send className="ml-2 group-hover:translate-x-1 transition-transform duration-200" size={18} />

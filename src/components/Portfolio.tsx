@@ -34,13 +34,13 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-20 bg-gray-50">
+    <section id="portfolio" className="py-20 bg-[#101923]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Our Portfolio
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Discover some of the exceptional properties we manage across the globe, each delivering unique experiences while maintaining our standards of excellence.
           </p>
         </div>
@@ -57,22 +57,22 @@ const Portfolio = () => {
                   alt={property.name}
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-sm font-semibold text-amber-600">
+                <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-sm font-semibold text-[#FFA233]">
                   {property.type}
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-slate-800 mb-2">{property.name}</h3>
+                <h3 className="text-xl font-bold text-[#101923] mb-2">{property.name}</h3>
                 <div className="flex items-center text-gray-600 mb-3">
                   <MapPin size={16} className="mr-1" />
                   <span className="text-sm">{property.location}</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
-                    <Star className="text-amber-400 fill-current" size={16} />
+                    <Star className="text-[#FFA233] fill-current" size={16} />
                     <span className="ml-1 text-sm font-semibold text-gray-700">{property.rating}</span>
                   </div>
-                  <button className="text-amber-600 hover:text-amber-700 font-semibold text-sm transition-colors duration-200">
+                  <button className="text-[#FFA233] hover:text-[#FF8C00] font-semibold text-sm transition-colors duration-200">
                     View Details
                   </button>
                 </div>
