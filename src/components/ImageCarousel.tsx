@@ -1,5 +1,4 @@
-
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import Autoplay from "embla-carousel-autoplay";
 
@@ -57,8 +56,6 @@ const ImageCarousel = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="left-4 bg-white/80 hover:bg-white" />
-          <CarouselNext className="right-4 bg-white/80 hover:bg-white" />
         </Carousel>
       </div>
     </section>
