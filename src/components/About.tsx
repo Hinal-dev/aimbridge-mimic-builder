@@ -46,8 +46,8 @@ const About = () => {
           
           <div className="relative">
             <img 
-              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-              alt="Professional hospitality team meeting"
+              src="https://images.unsplash.com/photo-1721322800607-8c38375eef04"
+              alt="Elegant hotel lobby with comfortable seating"
               className="rounded-xl shadow-2xl"
             />
             <div className="absolute -bottom-6 -left-6 bg-[#FFA233] text-white p-6 rounded-xl shadow-xl">
