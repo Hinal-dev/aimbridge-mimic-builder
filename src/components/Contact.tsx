@@ -30,9 +30,9 @@ const Contact = () => {
 
     try {
       // Replace these with your actual EmailJS credentials
-      const serviceId = 'YOUR_SERVICE_ID';
-      const templateId = 'YOUR_TEMPLATE_ID';
-      const publicKey = 'YOUR_PUBLIC_KEY';
+      const serviceId = 'service_tha7c1n';
+      const templateId = 'template_h90htjv';
+      const publicKey = 'C73A5pr5vwerRp0Z7';
 
       const templateParams = {
         from_name: formData.name,
@@ -92,15 +92,15 @@ const Contact = () => {
           <div>
             <h3 className="text-2xl font-bold mb-8 text-[#FFA233]">Contact Information</h3>
             <div className="space-y-6">
-              <div className="flex items-center">
-                <div className="bg-[#FFA233] w-12 h-12 rounded-lg flex items-center justify-center mr-4">
-                  <Phone size={24} className="text-white" />
-                </div>
-                <div>
+              {/* <div className="flex items-center">
+                <div className="bg-amber-600 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                  <Phone size={24} />
+                </div> */}
+                {/* <div>
                   <div className="font-semibold">Phone</div>
                   <div className="text-gray-300">+1 (555) 123-4567</div>
-                </div>
-              </div>
+                </div> */}
+              {/* </div> */}
               
               <div className="flex items-center">
                 <div className="bg-[#FFA233] w-12 h-12 rounded-lg flex items-center justify-center mr-4">
@@ -118,12 +118,12 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="font-semibold">Headquarters</div>
-                  <div className="text-gray-300">Long Island, New York</div>
+                  <div className="text-gray-300">New York</div>
                 </div>
               </div>
             </div>
 
-            <div className="mt-12 p-6 bg-white/10 rounded-lg">
+            {/* <div className="mt-12 p-6 bg-white/10 rounded-lg">
               <h4 className="text-lg font-semibold text-[#FFA233] mb-4">Setup Required</h4>
               <p className="text-sm text-gray-300 mb-4">
                 To enable email functionality, please:
@@ -134,7 +134,7 @@ const Contact = () => {
                 <li>Create an email template</li>
                 <li>Replace the placeholder credentials in the code with your actual EmailJS Service ID, Template ID, and Public Key</li>
               </ol>
-            </div>
+            </div> */}
           </div>
           
           <div>

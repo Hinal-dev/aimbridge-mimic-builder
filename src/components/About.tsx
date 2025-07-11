@@ -3,10 +3,10 @@ import { Award, Globe, Users2, Building2, Calendar, Target, Heart, User } from '
 
 const About = () => {
   const stats = [
-    { icon: Calendar, number: "1993", label: "Founded" },
-    { icon: Building2, number: "250+", label: "Properties Managed" },
-    { icon: Globe, number: "45", label: "Countries" },
-    { icon: Users2, number: "50,000+", label: "Team Members" }
+    // { icon: Calendar, number: "1993", label: "Founded" },
+    // { icon: Building2, number: "250+", label: "Properties Managed" },
+    // { icon: Globe, number: "45", label: "Countries" },
+    // { icon: Users2, number: "50,000+", label: "Team Members" }
   ];
 
   const achievements = [
