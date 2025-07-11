@@ -11,8 +11,8 @@ const Footer = () => {
             <p className="text-gray-400 leading-relaxed mb-6">
               Elevating hospitality experiences through exceptional management and innovative solutions.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="bg-white/10 p-2 rounded-lg hover:bg-[#FFA233] transition-colors duration-200">
+            {/* <div className="flex space-x-4">
+              <a href="#" className="bg-slate-800 p-2 rounded-lg hover:bg-amber-600 transition-colors duration-200">
                 <Facebook size={20} />
               </a>
               <a href="#" className="bg-white/10 p-2 rounded-lg hover:bg-[#FFA233] transition-colors duration-200">
@@ -24,10 +24,10 @@ const Footer = () => {
               <a href="#" className="bg-white/10 p-2 rounded-lg hover:bg-[#FFA233] transition-colors duration-200">
                 <Linkedin size={20} />
               </a>
-            </div>
+            </div> */}
           </div>
           
-          <div>
+          {/* <div>
             <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
             <ul className="space-y-2">
               <li><a href="#" className="hover:text-[#FFA233] transition-colors duration-200">Property Management</a></li>
@@ -35,7 +35,7 @@ const Footer = () => {
               <li><a href="#" className="hover:text-[#FFA233] transition-colors duration-200">Revenue Optimization</a></li>
               <li><a href="#" className="hover:text-[#FFA233] transition-colors duration-200">Quality Assurance</a></li>
             </ul>
-          </div>
+          </div> */}
           
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
@@ -50,15 +50,16 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Contact</h4>
             <div className="space-y-2">
-              <p>Long Island, New York</p>
-              <p>+1 (555) 123-4567</p>
+              {/* <p>123 Hospitality Avenue</p> */}
+              <p>New York</p>
+              {/* <p>+1 (555) 123-4567</p> */}
               <p>info@goldcoasthm.com</p>
             </div>
           </div>
         </div>
         
-        <div className="border-t border-white/10 mt-8 pt-8 text-center">
-          <p>&copy; 2024 Gold Coast Hospitality Management. All rights reserved.</p>
+        <div className="border-t border-slate-800 mt-8 pt-8 text-center">
+          <p>&copy; 2025 PremiumStay. All rights reserved.</p>
         </div>
       </div>
     </footer>

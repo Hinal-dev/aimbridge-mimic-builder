@@ -19,11 +19,11 @@ const Navbar = () => {
           
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <a href="#home" className="text-gray-300 hover:text-[#FFA233] transition-colors duration-200 font-medium">Home</a>
-              <a href="#services" className="text-gray-300 hover:text-[#FFA233] transition-colors duration-200 font-medium">Services</a>
-              <a href="#about" className="text-gray-300 hover:text-[#FFA233] transition-colors duration-200 font-medium">About</a>
-              <a href="#portfolio" className="text-gray-300 hover:text-[#FFA233] transition-colors duration-200 font-medium">Portfolio</a>
-              <a href="#contact" className="text-gray-300 hover:text-[#FFA233] transition-colors duration-200 font-medium">Contact</a>
+              <a href="#home" className="text-slate-700 hover:text-amber-600 transition-colors duration-200 font-medium">Home</a>
+              <a href="#services" className="text-slate-700 hover:text-amber-600 transition-colors duration-200 font-medium">Services</a>
+              <a href="#about" className="text-slate-700 hover:text-amber-600 transition-colors duration-200 font-medium">About</a>
+              {/* <a href="#portfolio" className="text-slate-700 hover:text-amber-600 transition-colors duration-200 font-medium">Portfolio</a> */}
+              <a href="#contact" className="text-slate-700 hover:text-amber-600 transition-colors duration-200 font-medium">Contact</a>
             </div>
           </div>
           
