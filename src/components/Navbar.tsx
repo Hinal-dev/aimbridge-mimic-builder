@@ -14,7 +14,11 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-white">Gold Coast Hospitality</h1>
+            <img 
+              src="/lovable-uploads/424a4c9b-9fa9-4b73-a3e7-6c5241defb12.png" 
+              alt="Gold Coast Hospitality Management" 
+              className="h-12 w-auto"
+            />
           </div>
           
           <div className="hidden md:block">
