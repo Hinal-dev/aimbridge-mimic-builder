@@ -12,12 +12,12 @@ const Navbar = () => {
   return (
     <nav className="bg-[#101923] shadow-sm sticky top-0 z-50 border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-2">
+        <div className="flex justify-between items-center py-1">
           <div className="flex-shrink-0">
             <img 
               src="/lovable-uploads/424a4c9b-9fa9-4b73-a3e7-6c5241defb12.png" 
               alt="Gold Coast Hospitality Management" 
-              className="h-24 w-auto"
+              className="h-32 w-auto"
             />
           </div>
           
