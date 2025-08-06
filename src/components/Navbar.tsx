@@ -17,7 +17,7 @@ const Navbar = () => {
             <img 
               src="/lovable-uploads/424a4c9b-9fa9-4b73-a3e7-6c5241defb12.png" 
               alt="Gold Coast Hospitality Management" 
-              className="h-16 w-auto"
+              className="h-24 w-auto"
             />
           </div>
           
