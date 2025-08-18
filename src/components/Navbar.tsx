@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import logo from '../../public/lovable-uploads/sun and coast22-01 (2).png'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,11 +15,12 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-0">
           <div className="flex-shrink-0">
-            <img 
-              src="/lovable-uploads/424a4c9b-9fa9-4b73-a3e7-6c5241defb12.png" 
-              alt="Gold Coast Hospitality Management" 
-              className="h-32 w-auto"
-            />
+          <img
+          src={logo} // replace with actual image path
+          alt="Gold Coast Hospitality"
+          className="h-10 w-auto" // controls logo height
+        />
+            {/* <h1 className="text-2xl font-bold text-white">Gold Coast Hospitality</h1> */}
           </div>
           
           <div className="hidden md:block">
