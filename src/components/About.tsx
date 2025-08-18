@@ -23,7 +23,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-[#101923]">
+    <section id="about" className="pt-8 pb-20 bg-[#101923]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -34,8 +34,8 @@ const About = () => {
 
         {/* Company Story Section */}
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
-          <div>
-            <h3 className="text-3xl font-bold text-white mb-6">Our Story</h3>
+          <div className="text-center lg:text-left">
+            <h3 className="text-3xl font-bold text-white mb-6 text-center">Our Story</h3>
             <p className="text-lg text-gray-300 mb-6 leading-relaxed">
               Founded in 1993 with a single budget motel in Auburn, NY, Gold Coast Hospitality Management has grown into a trusted leader in limited-service hospitality operations. Headquartered in Long Island, New York, we specialize in managing a diverse portfolio of franchised and independently operated properties.
             </p>
