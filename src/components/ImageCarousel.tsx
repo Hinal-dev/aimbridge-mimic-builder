@@ -1,10 +1,7 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Card, CardContent } from "@/components/ui/card";
-import { useState, useEffect } from "react";
+import Autoplay from "embla-carousel-autoplay";
 
 const ImageCarousel = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  
   const images = [
     {
       src: "/uploads/6b553e4e-7b6d-430a-9b29-8b9a5400bb14.png",
@@ -28,22 +25,13 @@ const ImageCarousel = () => {
     }
   ];
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000);
-
-    return () => clearInterval(timer);
-  }, [images.length]);
 
   return (
     <section className="relative w-full h-screen overflow-hidden">
       <Carousel 
         className="w-full h-full"
-        opts={{
-          align: "start",
-          loop: true,
-        }}
+        opts={{ align: "start", loop: true }}
+        plugins={[Autoplay({ delay: 3000, stopOnInteraction: false })]}
       >
         <CarouselContent className="h-full">
           {images.map((image, index) => (
