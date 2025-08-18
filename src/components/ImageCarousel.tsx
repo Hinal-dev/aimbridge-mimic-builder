@@ -54,22 +54,6 @@ const ImageCarousel = () => {
                   alt={image.alt}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black/20" />
-                <div className="absolute bottom-8 left-8 text-white">
-                  <h2 className="text-2xl md:text-4xl font-bold mb-2">
-                    {image.alt}
-                  </h2>
-                  <div className="flex space-x-2">
-                    {images.map((_, dotIndex) => (
-                      <div
-                        key={dotIndex}
-                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                          dotIndex === currentIndex ? 'bg-white' : 'bg-white/50'
-                        }`}
-                      />
-                    ))}
-                  </div>
-                </div>
               </div>
             </CarouselItem>
           ))}
