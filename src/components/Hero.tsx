@@ -11,7 +11,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center">
+    <section className="relative min-h-screen flex items-center">
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{

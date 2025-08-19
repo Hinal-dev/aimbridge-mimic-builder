@@ -18,7 +18,7 @@ const Navbar = () => {
           <img
           src={logo} // replace with actual image path
           alt="Gold Coast Hospitality"
-          className="h-10 w-auto" // controls logo height
+          className="h-16 w-auto" // controls logo height
         />
             {/* <h1 className="text-2xl font-bold text-white">Gold Coast Hospitality</h1> */}
           </div>

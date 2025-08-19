@@ -59,7 +59,11 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-slate-800 mt-8 pt-8 text-center">
-          <p>&copy; 2025 PremiumStay. All rights reserved.</p>
+          <p>&copy; 2025 Gold Coast Hospitality Management. All rights reserved. | {"  "}
+          <a href="/privacy-policy.html" rel="nofollow" style={{ color: "orange" }}>
+              Privacy Policy
+            </a>
+          </p>
         </div>
       </div>
     </footer>

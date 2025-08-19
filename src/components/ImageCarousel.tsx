@@ -27,7 +27,7 @@ const ImageCarousel = () => {
   ];
 
   return (
-    <section className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-screen min-h-[300px] sm:min-h-[400px] overflow-hidden mb-0">
+    <section id="home" className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-screen min-h-[300px] sm:min-h-[400px] overflow-hidden mb-0">
       <Carousel 
         className="w-full h-full"
         opts={{ align: "start", loop: true }}
