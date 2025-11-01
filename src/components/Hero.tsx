@@ -27,7 +27,7 @@ const Hero = () => {
           </h1>
           <div className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed max-w-3xl mx-auto">
             <p className="mb-4">
-              Founded in 1993 with a single budget motel in Auburn, NY, Gold Coast Hospitality Management has grown into a trusted leader in limited-service hospitality operations.
+              Founded in 1991 with a single budget motel in Auburn, NY, Gold Coast Hospitality Management has grown into a trusted leader in limited-service hospitality operations.
             </p>
             <p>
               Our success is built on decades of hands-on experience in all facets of the industry—including daily hotel operations, construction and renovation, franchise negotiations, and brand conversions.

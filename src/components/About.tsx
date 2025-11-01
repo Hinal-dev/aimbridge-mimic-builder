@@ -37,7 +37,7 @@ const About = () => {
           <div className="text-center lg:text-left">
             <h3 className="text-3xl font-bold text-white mb-6 text-center">Our Story</h3>
             <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-              Founded in 1993 with a single budget motel in Auburn, NY, Gold Coast Hospitality Management has grown into a trusted leader in limited-service hospitality operations. Headquartered in Long Island, New York, we specialize in managing a diverse portfolio of franchised and independently operated properties.
+              Founded in 1991 with a single budget motel in Auburn, NY, Gold Coast Hospitality Management has grown into a trusted leader in limited-service hospitality operations. Headquartered in Long Island, New York, we specialize in managing a diverse portfolio of franchised and independently operated properties.
             </p>
             <p className="text-lg text-gray-300 mb-6 leading-relaxed">
               Our success is built on decades of hands-on experience in all facets of the industry—including daily hotel operations, construction and renovation, franchise negotiations, and brand conversions. At Gold Coast Hospitality Management, we bring a strategic, results-driven approach to every property we manage, with a focus on operational excellence, guest satisfaction, and long-term value.
@@ -55,7 +55,7 @@ const About = () => {
                 <Award size={32} />
                 <div>
                   <div className="font-bold text-lg">Industry Leader</div>
-                  <div className="text-orange-100">Since 1993</div>
+                  <div className="text-orange-100">Since 1991</div>
                 </div>
               </div>
             </div>
