@@ -30,7 +30,7 @@ const Contact = () => {
 
     try {
       // Replace these with your actual EmailJS credentials
-      const serviceId = 'service_tha7c1n';
+      const serviceId = 'service_8eus5ek';
       const templateId = 'template_h90htjv';
       const publicKey = 'C73A5pr5vwerRp0Z7';
 
